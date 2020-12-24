@@ -28,6 +28,9 @@ p2 = "//p/a[not(preceding::a/. = .)]/@href[starts-with(.,'/wiki/') " \
      "and not(contains(., 'Smash')) " \
      "and not(contains(., 'brand')) " \
      "and not(contains(., 'Tweener')) and not(contains(., 'Award')) and not(contains(., 'Academy'))]"
+p3 = "/html/body//table/tbody/tr[1]/th[6][contains(text(), 'Opponent') or contains(text(), 'Partner')]/../../../tbody/tr/td[position()=6]/a[string-length(@href)<30]/@href"
+p4 = "/html/body//table/tbody/tr[1]/th[7][contains(text(), 'Opponent') or contains(text(), 'Partner')]/../../../tbody/tr/td[position()=7]/a[string-length(@href)<30]/@href"
+p5 = "/html/body//table/tbody/tr[1]/th[5][contains(text(), 'Opponent') or contains(text(), 'Partner')]/../../../tbody/tr/td[position()=5]/a[string-length(@href)<30]/@href"
 
 
 def main():
