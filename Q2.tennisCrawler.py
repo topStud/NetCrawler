@@ -7,7 +7,7 @@ WIKI_PREFIX = 'https://en.wikipedia.org'
 
 
 def crawl_url(url, xpaths):
-    time.sleep(1.5)
+    time.sleep(3)
     urls = []
     try:
         res = requests.get(url)
@@ -54,7 +54,7 @@ def tennisCrawler(url, xpaths):
     first_url_set = set(crawl_url(url, xpaths))
     ingest_urls(first_url_set, url, crawled_urls, crawled_urls_src, urls_distance_from_first, visited_urls)
 
-    while len(visited_urls) < 10:
+    while len(visited_urls) < 80:
         # do 3 DFS
         for i in range(3):
             random_url = get_random_unvisited_url(crawled_urls, visited_urls)
